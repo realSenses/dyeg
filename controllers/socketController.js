@@ -1,6 +1,5 @@
 const io = require("../lib/socketClient");
-const db = require("../models/Gif");
-const db = require("../models/Session");
+const db = require("../models");
 
 module.exports = {
 
