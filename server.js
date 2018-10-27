@@ -22,10 +22,25 @@ app.use(express.static("client/build"));
 app.use(routes);
 
 //Mongo DB
-mongoose.Promise = Promise;
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/gifcategories", function(err) {
-  if (err) throw err;
-})
+const databaseUri = 'mongodb://localhost/gifcategories';
+
+if (process.env.MONGODB_URI) {
+  // executes only when deployed as Heroku App
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  mongoose.connect(databaseUri);
+}
+
+const mongo = mongoose.connection;
+
+mongo.on("error", function(err) {
+  console.log("Mongoose Error: ", err);
+});
+
+mongo.once("open", function() {
+  console.log("Mongoose connection successful.");
+});
+
 
 // Start the API server
 server.listen(PORT, function() {
