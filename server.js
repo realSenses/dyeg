@@ -22,6 +22,7 @@ app.use(express.static("client/build"));
 app.use(routes);
 
 //Mongo DB
+mongoose.Promise = Promise;
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/gifcategories", function(err) {
   if (err) throw err;
 })
