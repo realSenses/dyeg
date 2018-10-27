@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../models/Session");
 
 
 //Defining methods for the sessionController
