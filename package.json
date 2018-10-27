@@ -10,9 +10,9 @@
     "herokuSeed": "node scripts/herokuSeed.js",
     "seed": "node scripts/localSeed.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "installDeps": "yarn && cd client && yarn",
+    "installDeps": "yarn && cd client && yarn install",
     "start": "node server.js",
-    "heroku-postbuild": " cd client && yarn install && cd.. yarn build && yarn client "
+    "heroku-postbuild": " cd client && yarn install"
 
   },
   "author": "Impulse Team",
