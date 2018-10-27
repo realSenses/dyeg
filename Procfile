@@ -1,1 +1,1 @@
-web: node scripts/start-client.js
+web: yarn client
