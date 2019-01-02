@@ -1,84 +1,35 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700");
 @import url("https://use.fontawesome.com/releases/v5.0.10/css/all.css");
-
 body {
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   color: white;
-  background: linear-gradient(to right, #360033, #0b8793);
-}
-
-/*p {
-  margin: 0px; }
-
-.home-container {
-  padding-bottom: 50px; }
-  
- */
-
-/* h1, h2, h3, h4, h5, h6, p {
-  font-family: "Montserrat", sans-serif;
-  color: white;
-  font-weight: 700; }
-
-.signup-btn, .login-btn, .enter-btn {
-  font-family: "Montserrat", sans-serif;
-  color: white;
-  border-radius: 30px;
-  font-size: 25px;
-  margin: 10px;
-  padding: 8px;
-  width: 220px; }
-
-.color-btn {
-  border-radius: 50px;
-  height: 70px;
-  width: 70px;
-  margin: 8px; }
-
-input[type="text"] {
-  font-family: "Montserrat", sans-serif;
-  color: white;
-  border-radius: 30px;
-  border: none;
-  background-color: lightgrey;
-  color: grey;
-  padding: 8px;
-  font-size: 25px; }
- 
-.logo {
-  max-width: 700px;
-  width: 100%;
-  padding: 25px 25px 10px 25px; }
+  font-weight: 700;
+  background: #31263E; }
 
 #not-a-session {
-  margin-top: 25%;
-  font-size: 150%; }
+  padding: 40px 60px; }
 
 #session-not-exist {
-  padding: 30px; }
+  padding: 10px 30px; }
 
 #username-error {
   padding: 30px 40px 0px 40px; }
 
-.signup-btn {
-  background: #f12711;
-  width: 70%;
-  max-width: 250px; }
-
-.login-btn, .enter-btn {
-  background: #1D2671;
-  width: 70%;
-  max-width: 250px; }
-
-.signup-btn:hover, .login-btn:hover, .enter-btn:hover {
-  background-color: grey; }
-
 input[type="text"] {
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
-  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  background-color: lightgrey;
+  color: grey;
+  padding: 8px;
+  font-size: 25px;
+  margin-top: 10px;
   width: 70%;
   max-width: 250px; }
 
@@ -90,10 +41,10 @@ input[type="text"]:focus {
   font-size: 40px; }
 
 #roomkey {
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
   border-radius: 30px;
-  background-color: #f12711;
+  background-color: #FF6161;
   width: 80%;
   max-width: 300px;
   font-size: 14px;
@@ -103,20 +54,244 @@ input[type="text"]:focus {
   margin-top: -10px;
   font-size: 40px; }
 
-.prompt-title {
+p {
+  margin: 0px; }
+
+.home-container {
+  padding-bottom: 50px; }
+
+.judge-instructions {
   font-size: 27px;
   padding-top: 15px; }
+
+.game-instructions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: #5a5164;
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+  color: #837c8b; }
+
+.game-instructions:hover {
+  cursor: pointer;
+  background-color: white;
+  transition: .25s; }
+
+#general-game-instructions {
+  background-color: #31263E;
+  position: static;
+  margin: 0px auto;
+  width: 150px;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: .5px; }
+
+#general-game-instructions:hover {
+  cursor: help;
+  color: white;
+  transition: .25s; }
+
+.theme-and-category {
+  background-color: #44BBA4;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px; }
+
+.theme-prompt {
+  color: #2a7566; }
+
+.category-prompt {
+  font-size: 19px; }
+
+.modal-background {
+  background-color: rgba(49, 38, 62, 0.95); }
+
+.modal-style {
+  background-color: #5a5164;
+  border-radius: 15px;
+  padding: 20px 10px;
+  border: 3px solid #484050; }
+
+.modal-title {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 700;
+  color: white;
+  font-size: 35px; }
+
+.modal-text {
+  padding: 20px; }
+
+.modal-p {
+  padding: 5px;
+  font-size: 13px; }
+
+.modal-btn i {
+  background-color: #44BBA4;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 10px; }
+
+.modal-btn:hover i {
+  cursor: pointer;
+  background-color: #3da893;
+  transition: .25s; }
+
+@media only screen and (max-width: 650px) {
+  .modal-style {
+    width: 90% !important; } }
+
+.btn {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  border-radius: 30px;
+  font-size: 25px;
+  padding: 8px;
+  width: 70%;
+  max-width: 250px; }
+
+.btn:hover {
+  transform: scale(0.99); }
+
+.signup-btn, .login-btn, .enter-btn, .back-btn {
+  margin: 10px; }
+
+.signup-btn {
+  background-color: #FF6161; }
+
+.signup-btn:hover {
+  background-color: #cc4d4d; }
+
+.login-btn {
+  background-color: #D45FFF; }
+
+.login-btn:hover {
+  background-color: #a94ccc; }
+
+.enter-btn {
+  background-color: #FFC655; }
+
+.enter-btn:hover {
+  background-color: #e5b24c; }
+
+.back-btn {
+  max-width: 150px;
+  background-color: #D45FFF; }
+
+.back-btn:hover {
+  background-color: #a94ccc; }
+
+.logo {
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 25px 10px 25px; }
+
+.mini-logo-holder {
+  padding: 90px 0 10px 0; }
+
+.mini-logo {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto; }
+
+.giphy-component {
+  padding: 10px; }
+  .giphy-component #giphy-search-judge {
+    background-color: #FF6161 !important; }
+  .giphy-component #giphy-search-instructions {
+    top: 15px; }
+  .giphy-component #giphy-search-prompt {
+    max-width: 450px;
+    width: 100%;
+    margin-top: 55px; }
+  .giphy-component .search-holder {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto; }
+    .giphy-component .search-holder input[type="text"] {
+      width: calc(100% - 65px);
+      max-width: none; }
+    .giphy-component .search-holder .search-button {
+      width: 50px;
+      height: 50px;
+      background: #FF8A5B;
+      display: inline-block;
+      margin: 0px 0px 0px 15px;
+      position: relative;
+      top: 17px;
+      border-radius: 50%; }
+      .giphy-component .search-holder .search-button i {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 20px; }
+    .giphy-component .search-holder .search-button:hover {
+      cursor: pointer;
+      background: #e57c51; }
+    .giphy-component .search-holder img {
+      width: 100%;
+      max-height: 250px;
+      margin-top: 15px;
+      border-radius: 15px; }
+    .giphy-component .search-holder .button-holder {
+      width: 100%;
+      text-align: right;
+      padding-top: 15px; }
+      .giphy-component .search-holder .button-holder .timer-placeholder {
+        display: inline-block;
+        width: calc(100% - 115px);
+        text-align: left;
+        font-size: 30px;
+        position: relative;
+        bottom: 12px; }
+        .giphy-component .search-holder .button-holder .timer-placeholder i {
+          padding-right: 10px; }
+      .giphy-component .search-holder .button-holder .button {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        display: inline-block; }
+      .giphy-component .search-holder .button-holder .button:hover {
+        cursor: pointer; }
+      .giphy-component .search-holder .button-holder .research {
+        background: lightgray;
+        position: relative; }
+        .giphy-component .search-holder .button-holder .research i {
+          color: darkgrey;
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          font-size: 20px; }
+      .giphy-component .search-holder .button-holder .research:hover {
+        background: black; }
+      .giphy-component .search-holder .button-holder .confirm {
+        background: #44BBA4;
+        position: relative;
+        margin-left: 10px; }
+        .giphy-component .search-holder .button-holder .confirm i {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          font-size: 20px; }
+      .giphy-component .search-holder .button-holder .confirm:hover {
+        cursor: pointer;
+        background: #3da893; }
 
 .gif-component {
   background-size: cover;
   text-align: center; }
   .gif-component .gif-preview {
     object-fit: fill;
-    max-height: 240px;
+    max-height: 300px;
     max-width: 100%; }
 
 .promptSelect-component {
-  padding: 10px; }
+  padding: 8px 10px; }
   .promptSelect-component h5 {
     font-family: "Montserrat", sans-serif;
     color: white; }
@@ -131,162 +306,176 @@ input[type="text"]:focus {
     .promptSelect-component .prompt-card i {
       padding-right: 15px; }
   .promptSelect-component .prompt-card:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    transform: scale(0.99); }
 
-.color-btn {
+.profile-pg-component .setup-color-buttondiv .color-btn {
   border-radius: 50%;
-  height: 70px;
-  width: 70px;
-  margin: 7px; }
+  height: 80px;
+  width: 80px;
+  margin: 8px; }
 
-.setup-profile {
-  font-size: 30px;
-  padding-top: 15px; }
-
-.pick-a-color {
-  font-size: 20px;
-  padding: 20px 15px 0px 15px; }
-
-.complete-profile-btn {
-  padding: 15px 15px 0px 15px; }
-
-.join {
-  background-color: #44BBA4;
-  color: #fff; }
-
-.join:hover {
-  cursor: pointer; }
-
-.cantJoin {
-  background-color: #C0C0C0;
-  color: grey !important; }
-
-.join-btn {
-  font-family: "Montserrat", sans-serif;
-  color: white;
-  border-radius: 30px;
-  font-size: 25px;
-  padding: 10px 25px;
-  width: 180px;
-  transition: .25s; }
-
-.setup-color-buttondiv {
-  padding: 15px 20px; }
-
-.color-btn:hover {
-  box-shadow: 0 0 2px 5px grey; }
-
-#selected {
-  box-shadow: 0 0 1px 6px grey; }
-
-.yellow-prof {
-  background-color: #FFC655; }
-
-.blue-prof {
-  background-color: #5FACFF; }
-
-.red-prof {
-  background-color: #f12711; }
-
-.pink-prof {
-  background-color: #1D2671; }
-
-.green-prof {
-  background-color: #44BBA4; }
-
-.orange-prof {
-  background-color: #FF8A5B; }
-
-.purple-prof {
-  background-color: #9964FF; }
-
-.charcoal-prof {
-  background-color: #444444; }
+.profile-pg-component {
+  padding: 10px 0; }
+  .profile-pg-component .setup-profile {
+    font-size: 25px;
+    padding-bottom: 10px; }
+  .profile-pg-component #enter-name {
+    margin: 0; }
+  .profile-pg-component .complete-profile-btn {
+    padding: 20px; }
+  .profile-pg-component .join-btn {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    border-radius: 30px;
+    font-size: 25px;
+    padding: 12px 25px;
+    transition: .25s; }
+  .profile-pg-component .join, .profile-pg-component .join:focus, .profile-pg-component .join:active {
+    background-color: #44BBA4; }
+  .profile-pg-component .join:hover {
+    cursor: pointer;
+    background: #3a9785;
+    transform: scale(0.99); }
+  .profile-pg-component .cantJoin {
+    background-color: #C0C0C0;
+    color: grey !important; }
+  .profile-pg-component .setup-color-buttondiv {
+    max-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 15px; }
+    .profile-pg-component .setup-color-buttondiv .pick-a-color {
+      padding: 30px 0 15px 0;
+      font-size: 17px;
+      overflow: hidden; }
+    .profile-pg-component .setup-color-buttondiv .pick-a-color:before, .profile-pg-component .setup-color-buttondiv .pick-a-color:after {
+      background-color: white;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 24%; }
+    .profile-pg-component .setup-color-buttondiv .pick-a-color:before {
+      right: 0.5em;
+      margin-left: -50%; }
+    .profile-pg-component .setup-color-buttondiv .pick-a-color:after {
+      left: 0.5em;
+      margin-right: -50%; }
+    .profile-pg-component .setup-color-buttondiv .color-btn:hover {
+      box-shadow: 0 0 2px 5px grey; }
+    .profile-pg-component .setup-color-buttondiv #selected {
+      box-shadow: 0 0 1px 6px grey; }
+    .profile-pg-component .setup-color-buttondiv .yellow-prof {
+      background-color: #FFC655; }
+    .profile-pg-component .setup-color-buttondiv .blue-prof {
+      background-color: #5FACFF; }
+    .profile-pg-component .setup-color-buttondiv .red-prof {
+      background-color: #FF6161; }
+    .profile-pg-component .setup-color-buttondiv .pink-prof {
+      background-color: #D45FFF; }
+    .profile-pg-component .setup-color-buttondiv .green-prof {
+      background-color: #44BBA4; }
+    .profile-pg-component .setup-color-buttondiv .orange-prof {
+      background-color: #FF8A5B; }
+    .profile-pg-component .setup-color-buttondiv .purple-prof {
+      background-color: #9964FF; }
+    .profile-pg-component .setup-color-buttondiv .charcoal-prof {
+      background-color: #444444; }
+    .profile-pg-component .setup-color-buttondiv .grey-prof {
+      background-color: #C0C0C0; }
 
 .bottom-nav {
   position: fixed;
+  left: 0;
   bottom: 0;
   width: 100%;
   transition: .5s;
-  background: #C0C0C0;
+  background: #5a5164;
   height: 40px;
   min-height: 0;
-  z-index: 1000; }
+  z-index: 1000;
+  cursor: pointer; }
   .bottom-nav .content-holder {
     width: 100%;
     position: relative; }
-    .bottom-nav .content-holder .user-initial {
-      position: absolute;
-      left: 15px;
-      top: 4px;
-      padding: 4px 9px 4px 9px;
-      border-radius: 50%; }
-    .bottom-nav .content-holder .userScore {
-      position: absolute;
-      left: 60px;
-      top: 11px; }
     .bottom-nav .content-holder .home-button {
       position: absolute;
-      right: 15px;
-      top: 7px;
-      color: grey;
+      right: 12px;
+      top: 8px;
+      color: #C0C0C0;
       font-size: 25px;
       z-index: 1000; }
 
 .expanded {
-  min-height: 50vh; }
+  min-height: 50vh;
+  overflow: scroll;
+  box-shadow: 0 -1px 5px #444444; }
 
 .not-expanded {
   min-height: 0; }
 
 .loading-screen-holder {
-  min-height: 25px;
-  width: 100%;
-  padding: 15px;
-  margin-top: 30px; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px; }
+  .loading-screen-holder .btn {
+    margin: 0; }
 
-#loading-pg-roomkey, .judge {
-  padding: 10px 25px;
+.judge, #loading-pg-roomkey {
+  padding: 10px 20px;
   border-radius: 20px;
   position: absolute;
+  min-width: 133px;
+  left: 10px; }
+
+.judge {
   top: 10px; }
 
 #loading-pg-roomkey {
-  right: 15px;
-  background-color: #f12711; }
-
-.judge {
-  left: 15px;
-  background-color: #C0C0C0; }
+  top: 65px;
+  background-color: #FF6161; }
 
 .judge-start, .show-gifs-btn, .next-round-btn {
   font-family: "Montserrat", sans-serif;
   color: white;
-  padding: 10px 25px;
+  font-size: 17px;
+  padding: 10px;
   border-radius: 40px;
-  position: absolute;
-  top: 65px;
-  right: 15px;
-  background: #1D2671;
-  font-size: 16px; }
+  width: 145px;
+  margin: 0 auto; }
 
-.show-gifs-btn, .next-round-btn {
-  top: 10px; }
+.judge-start:hover, .show-gifs-btn:hover, .next-round-btn:hover {
+  cursor: pointer;
+  transform: scale(0.99); }
+
+.next-round-btn {
+  background-color: #FF6161; }
+
+.next-round-btn:hover {
+  background-color: #b24343; }
+
+.judge-start, .show-gifs-btn {
+  background-color: #D45FFF; }
 
 .judge-start:hover, .show-gifs-btn:hover {
-  cursor: pointer;
-  background: #c533fb; }
+  background-color: #c533fb; }
 
-.loading-gif {
-  padding: 15px;
-  max-width: 200px;
-  margin: 25px auto; }
+.show-gifs-btn {
+  margin-top: 10%; }
+
+.pull-themes-btn {
+  width: 100%; }
+
+.waiting-msg {
+  padding: 10px 0;
+  font-size: 85%; }
 
 #current-players, #no-players {
   font-family: "Montserrat", sans-serif;
   color: white;
-  font-size: 175%;
-  margin: 5px 0px 20px 0px; }
+  font-size: 185%; }
 
 #username {
   font-family: "Montserrat", sans-serif;
@@ -295,14 +484,13 @@ input[type="text"]:focus {
 
 .current-players-div {
   width: 100%;
-  padding-top: 15px;
   text-align: center;
-  margin-top: -25px; }
+  padding: 10px; }
 
 .player-bubble {
   display: inline-block;
   z-index: 100;
-  margin: 0px -10px 0px -10px; }
+  margin: 0 -12px; }
 
 .fa-stack {
   display: inline-block;
@@ -312,95 +500,110 @@ input[type="text"]:focus {
   vertical-align: middle;
   width: 2em; }
 
-.playerlist-holder {
-  width: 100%;
-  text-align: left;
-  margin-top: 5px; }
-  .playerlist-holder td {
-    padding: 5px 15px; }
+#timer-icon {
+  font-size: 40px; }
 
-    Giphy Search
-    .giphy-component {
+.loading-screen-timer {
+  padding-left: 10px;
+  font-size: 40px; }
+
+.playerlist-holder {
+  width: 92%;
+  text-align: left; }
+  .playerlist-holder .player {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px; }
+
+.gif-reveal-component {
+  padding: 10px; }
+  .gif-reveal-component .pick-winner-instruction {
+    font-size: 30px;
+    width: 100%;
+    letter-spacing: 1px;
+    color: white;
+    padding-bottom: 10px; }
+  .gif-reveal-component .gif-reveal-div {
+    margin: 0px auto;
+    padding: 10px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px; }
+    .gif-reveal-component .gif-reveal-div .gif-component .gif-preview {
+      border-radius: 25px;
       padding: 10px; }
-      .giphy-component #giphy-search-judge {
-        background-color: #FF6161 !important; }
-      .giphy-component #giphy-search-instructions {
-        top: 15px; }
-      .giphy-component #giphy-search-prompt {
-        max-width: 450px;
-        width: 100%;
-        margin-top: 55px; }
-      .giphy-component .search-holder {
-        width: 100%;
-        max-width: 450px;
-        margin: 0 auto; }
-        .giphy-component .search-holder input[type="text"] {
-          width: calc(100% - 65px);
-          max-width: none; }
-        .giphy-component .search-holder .search-button {
-          width: 50px;
-          height: 50px;
-          background: #FF8A5B;
-          display: inline-block;
-          margin: 0px 0px 0px 15px;
-          position: relative;
-          top: 17px;
-          border-radius: 50%; }
-          .giphy-component .search-holder .search-button i {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            font-size: 20px; }
-        .giphy-component .search-holder .search-button:hover {
-          cursor: pointer;
-          background: #e57c51; }
-        .giphy-component .search-holder img {
-          width: 100%;
-          max-height: 250px;
-          margin-top: 15px;
-          border-radius: 15px; }
-        .giphy-component .search-holder .button-holder {
-          width: 100%;
-          text-align: right;
-          padding-top: 15px; }
-          .giphy-component .search-holder .button-holder .timer-placeholder {
-            display: inline-block;
-            width: calc(100% - 115px);
-            text-align: left;
-            font-size: 30px;
-            position: relative;
-            bottom: 12px; }
-            .giphy-component .search-holder .button-holder .timer-placeholder i {
-              padding-right: 10px; }
-          .giphy-component .search-holder .button-holder .button {
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            display: inline-block; }
-          .giphy-component .search-holder .button-holder .button:hover {
-            cursor: pointer; }
-          .giphy-component .search-holder .button-holder .research {
-            background: lightgray;
-            position: relative; }
-            .giphy-component .search-holder .button-holder .research i {
-              color: darkgrey;
-              position: absolute;
-              top: 15px;
-              right: 15px;
-              font-size: 20px; }
-          .giphy-component .search-holder .button-holder .research:hover {
-            background: black; }
-          .giphy-component .search-holder .button-holder .confirm {
-            background: #44BBA4;
-            position: relative;
-            margin-left: 10px; }
-            .giphy-component .search-holder .button-holder .confirm i {
-              position: absolute;
-              top: 15px;
-              right: 15px;
-              font-size: 20px; }
-          .giphy-component .search-holder .button-holder .confirm:hover {
-            cursor: pointer;
-            background: #3da893; }
-            
-*/ 
+    .gif-reveal-component .gif-reveal-div .gif-component .gif-preview:hover {
+      cursor: pointer;
+      background: #4a3b5c;
+      transition: .25s; }
+
+.winnerScreen-component {
+  padding: 10px; }
+  .winnerScreen-component .winning-gif-holder {
+    max-width: 450px;
+    width: 100%;
+    background: #3d304e;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 15px; }
+  .winnerScreen-component .winning-gif {
+    max-width: 100%;
+    border-radius: 15px;
+    max-height: 250px;
+    display: block;
+    margin: 0 auto; }
+  .winnerScreen-component .true-that-text {
+    max-width: 400px;
+    width: 85%; }
+  .winnerScreen-component .winner-name {
+    padding: 10px 10px 5px 10px;
+    font-size: 30px;
+    margin: 0;
+    letter-spacing: .5px; }
+
+#winner-pg-prompt {
+  max-width: 400px;
+  margin: 10px auto;
+  background-color: #FF6161; }
+
+#winner-pg-theme {
+  color: #993a3a; }
+
+@media only screen and (min-width: 650px) {
+  .mini-logo-holder {
+    padding: 30px 0; }
+  .mini-logo {
+    width: 230px;
+    height: 230px;
+    margin: 0 auto; }
+  .theme-and-category {
+    max-width: 450px;
+    min-width: 450px; }
+  .gif-reveal-component .pick-winner-instruction {
+    font-size: 50px; }
+  .gif-reveal-component .gif-reveal-div .gif-component .gif-preview:hover {
+    cursor: pointer;
+    background: #4a3b5c;
+    transition: .25s; }
+  .prompt-select-pg .judge-instructions {
+    font-size: 30px; }
+  .profile-pg-component {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    justify-content: center; }
+    .profile-pg-component .setup-profile {
+      font-size: 30px; }
+    .profile-pg-component #enter-name {
+      max-width: 300px; }
+    .profile-pg-component .setup-color-buttondiv {
+      padding: 10px 0 20px 0;
+      max-width: 700px; }
+      .profile-pg-component .setup-color-buttondiv .pick-a-color {
+        font-size: 20px; }
+      .profile-pg-component .setup-color-buttondiv .pick-a-color:before, .profile-pg-component .setup-color-buttondiv .pick-a-color:after {
+        display: none; }
+      .profile-pg-component .setup-color-buttondiv .color-btn {
+        height: 100px;
+        width: 100px;
+        margin: 10px; } }

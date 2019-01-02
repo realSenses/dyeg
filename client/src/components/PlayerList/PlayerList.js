@@ -1,5 +1,4 @@
 import React from "react";
-import "./style/playerList.css";
 
 const PlayerList = props => (
   <div className="player">

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./style/winnerPage.css";
 
 class WinnerPage extends Component {
   state = {
@@ -48,6 +47,8 @@ class WinnerPage extends Component {
 	render() {
 		return (
 			<div className="winnerScreen-component">
+
+        <img className="true-that-text" src="https://i.imgur.com/zhbLaMZ.png" alt="True That!"/>
 
         <div className="theme-and-category" id="winner-pg-prompt"> 
             <p className="theme-prompt" id="winner-pg-theme">{this.props.theme}</p>

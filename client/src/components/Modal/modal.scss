@@ -1,0 +1,66 @@
+//Colors ===============================================================
+$background: #31263E;
+$green: #44BBA4;
+$orange: #FF8A5B;
+$grey: #C0C0C0;
+$yellow: #FFC655;
+$blue: #5FACFF;
+$red: #FF6161;
+$pink: #D45FFF;
+$purple: #9964FF;
+$charcoal: #444444;
+$lightPurple: #5a5164;
+
+@mixin font{
+    font-family:"Montserrat", sans-serif;
+    color:white;
+    font-weight: 700;
+  }
+
+//Modal Styling =======================================================
+.modal-background {
+    background-color:rgba(49, 38, 62, .95);
+}
+
+.modal-style {
+  background-color: $lightPurple;
+  border-radius: 15px;
+  padding:20px 10px;
+  border:3px solid #484050;
+}
+
+.modal-title {
+    @include font;
+    color:white;
+    font-size: 35px;
+}
+
+
+.modal-text {
+    padding:20px;
+}
+
+.modal-p {
+    padding: 5px;
+    font-size: 13px;
+}
+
+.modal-btn i{
+    background-color:$green;
+    border-radius: 50%;
+    font-size:20px;
+    padding:10px;
+}
+
+.modal-btn:hover i{
+    cursor: pointer;
+    background-color: #3da893;
+    transition: .25s;
+}
+
+@media only screen and (max-width: 650px) {
+    .modal-style {
+       width:90% !important;
+    }
+}
+

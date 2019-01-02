@@ -1,19 +1,18 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import BottomNav from "../../components/BottomNav/BottomNav";
-import CurrentPlayer from "../../components/CurrentPlayer/CurrentPlayer";
+import BottomNav from "../../components/BottomNav/bottomNav";
+import CurrentPlayer from "../../components/CurrentPlayer";
 import GifReveal from "../../components/GifReveal/GifReveal";
 import GiphySearch from "../../components/GiphySearch/GiphySearch";
 import io from "socket.io-client";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import PlayerList from "../../components/PlayerList/PlayerList";
 import PlayerListHolder from "../../components/PlayerListHolder/PlayerListHolder";
-import Profile from "../../components/Profile/Profile";
+import Profile from "../../components/Profile";
 import PromptSelect from "../../components/PromptSelect/PromptSelect";
 import Timer from "../../components/Timer/Timer";
 import WinnerPage from "../../components/WinnerPage/WinnerPage";
 import reloadSocket from "./reloadSocket.js";
-import "./style/home.css";
 
 class Home extends Component {
 

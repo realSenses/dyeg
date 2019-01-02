@@ -1,0 +1,193 @@
+//Fonts ==================================================================
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+@import url("https://use.fontawesome.com/releases/v5.0.10/css/all.css");
+
+//Colors ===============================================================
+$background: #31263E;
+$green: #44BBA4;
+$orange: #FF8A5B;
+$grey: #C0C0C0;
+$yellow: #FFC655;
+$blue: #5FACFF;
+$red: #FF6161;
+$pink: #D45FFF;
+$purple: #9964FF;
+$charcoal: #444444;
+$lightPurple: #5a5164;
+
+//Mixins ===============================================================
+@mixin position{
+  margin:0 auto;
+  text-align: center;
+}
+
+@mixin font{
+  font-family:"Montserrat", sans-serif;
+  color:white;
+  font-weight: 700;
+}
+
+//Body ===========================================================
+body {
+  @include position;
+  @include font;
+  background: $background;
+}
+
+//Error Messages ===========================================================
+#not-a-session{
+  padding:40px 60px;
+}
+
+#session-not-exist{
+  padding:10px 30px;
+}
+
+#username-error{
+  padding:30px 40px 0px 40px;
+}
+
+//Text Input =====================================================
+input[type="text"]{
+  @include position;
+  @include font;
+  border:none;
+  border-radius: 30px;
+  background-color: lightgrey;
+  color:grey;
+  padding: 8px;
+  font-size: 25px;
+  margin-top:10px;
+  width:70%;
+  max-width: 250px;
+}
+
+input[type="text"]:focus{
+  outline:none;
+}
+
+//Room Key ======================================================
+#key-icon{
+  transform: rotate(45deg);
+  font-size: 40px;
+}
+
+#roomkey{
+ @include position;
+ border-radius: 30px;
+ background-color: $red;
+ width: 80%;
+ max-width: 300px;
+ font-size:14px;
+ padding:10px 25px;
+}
+
+#random-word{
+  margin-top:-10px;
+  font-size: 40px;
+}
+
+p{
+  margin:0px;
+}
+
+.home-container {
+  padding-bottom: 50px;
+}
+
+.judge-instructions{
+  font-size: 27px;
+  padding-top: 15px;
+}
+
+//General Instructions. See individual components for specifics ======
+.game-instructions {
+  position: absolute;
+  top:10px;
+  right:10px;
+  border-radius: 50%;
+  background-color:$lightPurple;
+  width:30px;
+  height:30px;
+  padding:4px;
+  color:#837c8b;
+}
+
+.game-instructions:hover {
+  cursor: pointer;
+  background-color: white;
+  transition: .25s;
+}
+
+#general-game-instructions {
+  background-color: $background;
+  position: static;
+  margin:0px auto;
+  width:150px;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: .5px;
+}
+
+#general-game-instructions:hover {
+  cursor: help;
+  color:white;
+  transition: .25s;
+}
+
+//Theme and Category Prompt ========================================
+.theme-and-category {
+  background-color: $green;
+  border-radius:20px;
+  padding: 10px; 
+  margin:0 auto;
+  width: 100%;
+  max-width: 400px;
+}
+
+.theme-prompt {
+  color: #2a7566;
+}
+
+.category-prompt {
+  font-size: 19px;
+}
+
+//Modal  ==========================================================
+@import "../components/Modal/modal.scss";
+
+// Button Components =============================================
+@import "../components/Buttons/buttons.scss";
+
+//Logos  ==========================================================
+@import "../components/Logo/logo.scss";
+
+// GIPHY Search Screen =============================================
+@import "../components/GiphySearch/giphySearch.scss";
+
+// Gif Component  =============================================
+@import "../components/Gif/Gif.scss";
+
+// Prompt Select Screen ============================================
+@import "../components/PromptSelect/PromptSelect.scss";
+
+//Profile Page ======================================================
+@import "../components/Profile/profilePage.scss";
+
+//Bottom Nav ======================================================
+@import "../components/BottomNav/BottomNav.scss";
+
+//Loading Sceen ======================================================
+@import "../components/LoadingScreen/LoadingScreen.scss";
+
+//PlayerList Holder ===================================================
+@import "../components/PlayerListHolder/PlayerListHolder.scss";
+
+//Gif Reveal Holder ===================================================
+@import "../components/GifReveal/gifReveal.scss";
+
+//Winner Page ======================================================
+@import "../components/WinnerPage/winnerPage.scss";
+
+//Mobile and Desktop Responsive ======================================
+@import "responsive.scss";

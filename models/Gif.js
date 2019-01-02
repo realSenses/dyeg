@@ -1,8 +1,10 @@
-const mongoose = require("mongoose");
+var mongoose = require("mongoose");
 
-const Schema = mongoose.Schema;
+//Save a reference to the Schema constructor
+var Schema = mongoose.Schema;
 
-const GifSchema = new Schema({
+//Using the Schema constructor, create a new GifSchema object
+var GifSchema = new Schema({
 	//icon is required and a type of string
 	icon: {
 		type: Object,
@@ -25,8 +27,8 @@ const GifSchema = new Schema({
 	}
 });
 
-//Creates the Gif model
-const Gif = mongoose.model("Gif", GifSchema);
+//This creates our model from the above schema using mongoose's model method
+var Gif = mongoose.model("Gif", GifSchema);
 
 //Export the Gif model
 module.exports = Gif;

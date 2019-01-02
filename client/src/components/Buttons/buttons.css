@@ -1,0 +1,39 @@
+.btn {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  border-radius: 30px;
+  font-size: 25px;
+  padding: 8px;
+  width: 70%;
+  max-width: 250px; }
+
+.btn:hover {
+  transform: scale(0.99); }
+
+.signup-btn, .login-btn, .enter-btn, .back-btn {
+  margin: 10px; }
+
+.signup-btn {
+  background-color: #FF6161; }
+
+.signup-btn:hover {
+  background-color: #cc4d4d; }
+
+.login-btn {
+  background-color: #D45FFF; }
+
+.login-btn:hover {
+  background-color: #a94ccc; }
+
+.enter-btn {
+  background-color: #FFC655; }
+
+.enter-btn:hover {
+  background-color: #e5b24c; }
+
+.back-btn {
+  max-width: 150px;
+  background-color: #D45FFF; }
+
+.back-btn:hover {
+  background-color: #a94ccc; }

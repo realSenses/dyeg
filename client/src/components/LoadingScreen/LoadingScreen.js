@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./style/loadingScreen.css";
+import MiniLogo from "../../components/Logo/MiniLogo";
 import Modal from "../../components/Modal/Modal";
 
 class LoadingScreen extends Component {
@@ -20,6 +20,8 @@ class LoadingScreen extends Component {
     showTheme: false,
     category: "",
     theme: "",
+    // Show mini logo on specific loading screens
+    showMiniLogo: false,
     // Show judge start button or judge reveal button
     showChoices: false
   }
@@ -74,6 +76,7 @@ class LoadingScreen extends Component {
     if (this.props.showChoices !== this.state.showChoices) {
       this.setState({showChoices: this.props.showChoices})
       this.setState({showTheme: false})
+      this.setState({showMiniLogo:true})
     }
   }
 
@@ -81,16 +84,19 @@ class LoadingScreen extends Component {
     if (this.state.pendingMessage === "Players choosing gifs") {
       this.setState({showKeyword: false})
       this.setState({showTheme: true})
+      this.setState({showMiniLogo:false})
     }
 
     if (this.state.pendingMessage === "Waiting for game to start..." || this.state.pendingMessage === "Click start game when ready to play") {
       this.setState({showKeyword: true})
       this.setState({showTheme: false})
+      this.setState({showMiniLogo:true})
     }
 
     else if (this.state.pendingPlayerHeader === "Players in round") {
       this.setState({showKeyword: false})
       this.setState({showTheme: false})
+      this.setState({showMiniLogo:true})
     }
   }
 
@@ -113,116 +119,120 @@ class LoadingScreen extends Component {
     self.props.socket.emit('revealgifs')
   }
 
-render() {
-  return (
-    <div className="loading-screen-holder">
+  render() {
+    return (
+      <div className="loading-screen-holder">
 
-      { this.state.showKeyword ? 
-        <div className="pull-themes-btn">
-          { this.state.userJudge ? 
-            <Modal 
-              className="game-instructions" 
-              id="game-start-instructions" 
-              text="?"
-              modalTitle="What Now?"
-              modalInstructions= 
-                  "You are the judge this round! Wait until all your friends join the game room, then click 'Start Game'."
-              ></Modal>
-          : 
-            <Modal 
-              className="game-instructions" 
-              id="game-start-instructions" 
-              text="?"
-              modalTitle="What Now?"
-              modalInstructions= 
-                  "You are a player this round! The judge will start the game once everyone joins."
-            ></Modal>
-          }
-        </div>
-      : null }
-    
-      { this.state.showTheme ? 
-        <div className="theme-and-category" id="loading-pg-prompt"> 
-          <p className="theme-prompt">{this.state.theme}</p>
-          <p className="category-prompt">{this.state.category}</p>
-        </div>
-      : null }
-
-      <div>
-        <p className="waiting-msg">{this.state.pendingMessage}</p>
-          <div>
-            <h1 id="current-players"> {this.state.pendingPlayerHeader} </h1>
-              <div className="current-players-div">
-                  {this.state.members.length ? (
-                        <div style={{display: "inline-block"}}>
-                            {this.state.members.map(member => (
-                              <div className="player-bubble" key={member.ip}>
-                                <span className="fa-stack fa-3x" id="user-icon">
-                                  <i className="fas fa-circle" style={{color:member.color}}></i>
-                                  <strong className="fa-stack-1x" id="username">{String.fromCodePoint(member.name.codePointAt(0))}</strong>
-                                </span>
-                              </div>
-                            ))}
-                        </div>
-                  ) : null} 
-              </div>
-          </div>
-      </div>
-
-      { this.state.showKeyword ? 
-        <div className="pull-themes-btn">
-          { this.state.userJudge ? 
-            <Modal 
-              className="game-instructions" 
-              id="game-start-instructions" 
-              text="?"
-              modalTitle="What Now?"
-              modalInstructions1= 
-                "You are the judge this round!"
-              modalInstructions2 = 
-                "Wait until all your friends join the game room, then click 'Start Game'."
-              modalInstructions3 = ""
-              ></Modal>
-          : 
-            <Modal 
-              className="game-instructions" 
-              id="game-start-instructions" 
-              text="?"
-              modalTitle="What Now?"
-              modalInstructions1= 
-                "You are a player this round!"
-              modalInstructions2 = 
-                "The judge will start the game once everyone joins."
-              modalInstructions3 = ""
-              
-            ></Modal>
-          }
-
-          <p className="judge" style={{backgroundColor:'#C0C0C0'}}><i className="fas fa-gavel"></i> {this.props.judge}</p>
-
-          <div id="loading-pg-roomkey"> 
-            <p><i className="fas fa-key"></i> {this.props.keyword}</p>
-          </div>
-
-          <span className="btn">
+        { this.state.showKeyword ? 
+          <div className="pull-themes-btn">
             { this.state.userJudge ? 
-              <p className="judge-start" onClick={this.startGame}>Start Game</p>
-            : null}
-          </span>
-        </div>
-      : null}
+              <Modal 
+                className="game-instructions" 
+                id="game-start-instructions" 
+                text="?"
+                modalTitle="What Now?"
+                modalInstructions= 
+                    "You are the judge this round! Wait until all your friends join the game room, then click 'Start Game'."
+                ></Modal>
+            : 
+              <Modal 
+                className="game-instructions" 
+                id="game-start-instructions" 
+                text="?"
+                modalTitle="What Now?"
+                modalInstructions= 
+                    "You are a player this round! The judge will start the game once everyone joins"
+              ></Modal>
+            }
+          </div>
+        : null }
+      
+        { this.state.showTheme ? 
+          <div className="theme-and-category" id="loading-pg-prompt"> 
+            <p className="theme-prompt">{this.state.theme}</p>
+            <p className="category-prompt">{this.state.category}</p>
+          </div>
+        : null }
 
-      { this.state.userJudge ? 
+        { this.state.showMiniLogo ?
+          <MiniLogo></MiniLogo>
+        : null }
+
         <div>
-          { this.state.showChoices ? 
-            <p className="show-gifs-btn" onClick={this.showGifs}>Show Gifs</p>
-          : null}
+          <p className="waiting-msg">{this.state.pendingMessage}</p>
+            <div>
+              <h1 id="current-players"> {this.state.pendingPlayerHeader} </h1>
+                <div className="current-players-div">
+                    {this.state.members.length ? (
+                          <div style={{display: "inline-block"}}>
+                              {this.state.members.map(member => (
+                                <div className="player-bubble" key={member.ip}>
+                                  <span className="fa-stack fa-3x" id="user-icon">
+                                    <i className="fas fa-circle" style={{color:member.color}}></i>
+                                    <strong className="fa-stack-1x" id="username">{String.fromCodePoint(member.name.codePointAt(0))}</strong>
+                                  </span>
+                                </div>
+                              ))}
+                          </div>
+                    ) : null} 
+                </div>
+            </div>
         </div>
-      : null}
 
-    </div>
-  )
-}
+        { this.state.showKeyword ? 
+          <div className="pull-themes-btn">
+            { this.state.userJudge ? 
+              <Modal 
+                className="game-instructions" 
+                id="game-start-instructions" 
+                text="?"
+                modalTitle="What Now?"
+                modalInstructions1= 
+                  "You are the judge this round!"
+                modalInstructions2 = 
+                  "Wait until all your friends join the game room, then click 'Start Game'."
+                modalInstructions3 = ""
+                ></Modal>
+            : 
+              <Modal 
+                className="game-instructions" 
+                id="game-start-instructions" 
+                text="?"
+                modalTitle="What Now?"
+                modalInstructions1= 
+                  "You are a player this round!"
+                modalInstructions2 = 
+                  "The judge will start the game once everyone joins."
+                modalInstructions3 = ""
+                
+              ></Modal>
+            }
+
+            <p className="judge" style={{backgroundColor:'#C0C0C0'}}><i className="fas fa-gavel"></i> {this.props.judge}</p>
+
+            <div id="loading-pg-roomkey"> 
+              <p><i className="fas fa-key"></i> {this.props.keyword}</p>
+            </div>
+
+            <span className="btn">
+              { this.state.userJudge ? 
+                <p className="judge-start" onClick={this.startGame}>Start Game</p>
+              : null}
+            </span>
+          </div>
+        : null}
+
+        { this.state.userJudge ? 
+          <div>
+            { this.state.showChoices ? 
+              <p className="show-gifs-btn" onClick={this.showGifs}>Show Gifs</p>
+            : null}
+          </div>
+        : null}
+
+      </div>
+    )
+  }
 }
 
 export default LoadingScreen;

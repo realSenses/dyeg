@@ -2,7 +2,7 @@ import React from "react";
 
 const MiniLogo = props => (
   <div className="mini-logo-holder">
-    <img src="" alt="" className="mini-logo"/>
+    <img src="https://i.imgur.com/oQ0rcI1.png" alt="" className="mini-logo"/>
   </div>
 )
 

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./style/promptSelect.css";
 
 class PromptSelect extends Component {
 
@@ -27,9 +26,9 @@ class PromptSelect extends Component {
     render() {
         return (
             <div onClick={this.selectedTheme} className="promptSelect-component"> 
-                    <h5 style={{background:this.props.color}} className="prompt-card" id={this.props.theme} data={this.props.categories}>
-                        <i className={this.props.icon}></i>{this.props.theme}
-                    </h5>
+                <h5 style={{background:this.props.color}} className="prompt-card" id={this.props.theme} data={this.props.categories}>
+                    <i className={this.props.icon}></i>{this.props.theme}
+                </h5>
             </div>
         )
     }

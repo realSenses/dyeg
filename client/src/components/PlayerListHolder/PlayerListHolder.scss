@@ -1,0 +1,11 @@
+//Player List Holder ===================================================
+.playerlist-holder {
+  width: 92%;
+  text-align: left;
+
+  .player {
+    display: flex;
+    justify-content: space-between;
+    padding:10px 20px;
+  }
+}

@@ -1,6 +1,6 @@
-const db = require("../models/Index.js");
+const db = require("../models");
 
-// Defining all the methods for the gifController
+// Defining methods for the gifController
 module.exports = {
   findAll: function(req, res) {
     db.Gif

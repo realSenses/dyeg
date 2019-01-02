@@ -1,0 +1,75 @@
+//Desktop & iPad ========================================================
+@media only screen and (min-width: 650px) {
+
+  .mini-logo-holder {
+    padding:30px 0;
+  }
+
+  .mini-logo {
+    width: 230px;
+    height: 230px;
+    margin:0 auto;
+  }
+
+  .theme-and-category{
+    max-width:450px;
+    min-width:450px
+  }
+
+  // //GIF Reveal Page
+  .gif-reveal-component{
+    .pick-winner-instruction {
+      font-size:50px;
+    }
+    .gif-reveal-div {
+      .gif-component{
+         .gif-preview:hover{
+           cursor: pointer;
+           background: #4a3b5c;
+           transition: .25s;
+         }
+      }
+    }
+  }
+
+  //Prompt Select Page
+  .prompt-select-pg {
+    .judge-instructions{
+      font-size:30px;
+    }
+  }
+
+  //Profile Page
+  .profile-pg-component{
+    display: flex;
+    flex-direction: column;
+    height:95vh;
+    justify-content: center;
+
+    .setup-profile{
+      font-size:30px;
+    }
+
+    #enter-name {
+      max-width:300px;
+    }
+  
+    .setup-color-buttondiv {
+      padding:10px 0 20px 0;
+      max-width: 700px;
+
+      .pick-a-color {
+        font-size:20px;
+      }
+      .pick-a-color:before, .pick-a-color:after {
+        display: none;
+      }
+
+      %round-buttons{
+        height: 100px;
+        width:100px;
+        margin:10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+//Dependencies ===============================================================
+$background: #31263E;
+$green: #44BBA4;
+$orange: #FF8A5B;
+$grey: #C0C0C0;
+$yellow: #FFC655;
+$blue: #5FACFF;
+$red: #FF6161;
+$pink: #D45FFF;
+$purple: #9964FF;
+$charcoal: #444444;
+$lightPurple: #5a5164;
+
+@mixin font{
+  font-family: "Montserrat", sans-serif;
+  color:white;
+}
+
+//Prompt Select ===================================================
+.promptSelect-component {
+  padding:8px 10px;
+
+  h5{
+    @include font;
+  }
+  
+  .prompt-card {
+    text-align: left;
+    width: 95%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 10px;
+    border-radius: 15px;
+
+    i {
+      padding-right: 15px;
+    }
+  }
+
+  .prompt-card:hover {
+    cursor: pointer;
+    transform:scale(.99);
+  }
+}

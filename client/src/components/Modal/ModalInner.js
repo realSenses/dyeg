@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ModalButton from "../Buttons/modalButton";
-import "./style/modal.css";
 
 class ModalInner extends Component {
 
@@ -27,7 +26,7 @@ class ModalInner extends Component {
         return (
             <div>
                 {this.props.isOpen ?  
-                    <div className="modal-background" style={ this.state.background}>
+                    <div className="modal-background" style={this.state.background}>
                         <div className="modal-style" style={this.state.modal}>
                             <h1 className="modal-title">{this.props.title}</h1>
                             <div className="modal-text">

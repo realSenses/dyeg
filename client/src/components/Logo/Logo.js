@@ -2,7 +2,7 @@ import React from "react";
 
 const Logo = props => (
   <div className="game-logo">
-    <img src="https://media.giphy.com/media/swaXFSeBVHpHq/giphy.gif" alt="DYEG?" width="300px" className="logo"/>
+    <img src="https://i.imgur.com/AHZ9cwu.png" alt="True That" className="logo"/>
   </div>
 )
 

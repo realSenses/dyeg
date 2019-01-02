@@ -1,0 +1,7 @@
+.playerlist-holder {
+  width: 92%;
+  text-align: left; }
+  .playerlist-holder .player {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px; }
